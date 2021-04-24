@@ -25,5 +25,9 @@ urlpatterns = [
     path('dynamic2/<str:name>/<int:age>/',views.dynamic2),
     path('details/<str:name>/<str:place>',views.details),
     path('add/<int:v1>/<int:v2>/',views.add),
+    path('demo/',views.demo),
+    path('data/',views.data),
+    path('data2/<int:roll>/<str:name>/',views.data2),
+    path('register/',views.register,name='register'),
 
 ]

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>::Register::</title>
+</head>
+<body >
+	<div align="center">
+	<h1>Register page</h1>
+	<form action="{% url 'register' %}" method="POST">
+		{% csrf_token %}
+		<input type="textbox" name="name" placeholder="Enter Your Name"><br>
+		<input type="textbox" name="age" placeholder="Enter Your Age"><br>
+		<input type="email" name="email" placeholder="Enter Your Email"><br>
+		<input type="submit" >
+	</form>
+	{% if name or age or email %}
+	<h1>{{name}}</h1>
+	<h1>{{age}}</h1>
+	<h1>{{email}}</h1>
+	{% endif %}
+	</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>::Data::</title>
+</head>
+<body>
+<h1> My Data</h1>
+{% if context.name or context.Organization or context.Place %}
+<h1>name:{{ context.name }}</h1>
+<h1>Organization:{{ context.Organization }}</h1>
+<h1>Place:{{ context.place }}</h1>
+{% endif %}
+{% for i in data.myvalues %}
+	{% if i %}
+		<h2> {{i}}</h2>
+	{% endif %}
+	
+{% endfor %}
+</body>
+</html>
